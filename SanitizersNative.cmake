@@ -1,4 +1,4 @@
-set(MY_FLAGS "-Wall -Wpedantic -Wshadow")
+set(MY_FLAGS "-march=native -Wall -Wpedantic -Wshadow")
 set(MY_FLAGS_DEBUG "-fsanitize=address,undefined -O2")
 set(CMAKE_C_FLAGS_INIT ${MY_FLAGS})
 set(CMAKE_CXX_FLAGS_INIT ${MY_FLAGS})
