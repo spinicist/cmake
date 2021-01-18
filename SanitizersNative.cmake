@@ -10,3 +10,8 @@ include(CMakeToolsHelpers OPTIONAL)
 include(CMakePrintHelpers)
 include(${CMAKE_CURRENT_LIST_DIR}/BuildType.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake)
+
+find_program(CCACHE_PROGRAM ccache)
+if(CCACHE_PROGRAM)
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
+endif()
