@@ -1,6 +1,0 @@
-include(CheckCXXCompilerFlag)
-include(CMakeToolsHelpers OPTIONAL)
-include(CMakePrintHelpers)
-include(${CMAKE_CURRENT_LIST_DIR}/BuildType.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/ccache.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/vcpkg.cmake)
