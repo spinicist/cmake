@@ -1,0 +1,12 @@
+# Use git describe to get the version
+find_package(Git)
+if(GIT_FOUND)
+    execute_process(COMMAND ${GIT_EXECUTABLE} describe --tags --dirty RESULT_VARIABLE GIT_RES OUTPUT_VARIABLE GIT_DESCRIPTION)
+    if( NOT ${GIT_RES} EQUAL 0 )
+        message(WARNING "Git failed (not a repo, or no tags).")
+        set(GIT_VERSION "noversion")
+    else(NOT ${GIT_RES} EQUAL 0)
+        string(REPLACE "\n" "" GIT_VERSION ${GIT_DESCRIPTION})
+    endif(NOT ${GIT_RES} EQUAL 0)
+endif(GIT_FOUND)
+message(STATUS "Git Version: ${GIT_VERSION}")
