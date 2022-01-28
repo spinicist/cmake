@@ -4,6 +4,10 @@ include(CMakePrintHelpers)
 include(${CMAKE_CURRENT_LIST_DIR}/BuildType.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/ccache.cmake)
 
+include("${CMAKE_CURRENT_LIST_DIR}/flags/$ENV{FLAGS}.cmake")
+set(VCPKG_TARGET_TRIPLET $ENV{TRIPLET})
+set(VCPKG_HOST_TRIPLET $ENV{TRIPLET})
+
 set(CMAKE_C_FLAGS_INIT ${MY_FLAGS})
 set(CMAKE_CXX_FLAGS_INIT ${MY_FLAGS})
 set(CMAKE_C_FLAGS_DEBUG_INIT ${MY_FLAGS_DEBUG})
