@@ -1,0 +1,5 @@
+set(CMAKE_OSX_ARCHITECTURES "x86_64" CACHE INTERNAL "")
+set(MY_FLAGS "-Wall -Wshadow")
+set(VCPKG_TARGET_TRIPLET "x64-osx")
+set(VCPKG_C_FLAGS "")
+set(VCPKG_CXX_FLAGS "")
