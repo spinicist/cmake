@@ -1,6 +1,7 @@
 include(CheckCXXCompilerFlag)
 include(CMakeToolsHelpers OPTIONAL)
 include(CMakePrintHelpers)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_LIST_DIR})
 include(${CMAKE_CURRENT_LIST_DIR}/BuildType.cmake)
 include(${CMAKE_CURRENT_LIST_DIR}/ccache.cmake)
 
