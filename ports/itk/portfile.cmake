@@ -3,19 +3,19 @@ vcpkg_buildpath_length_warning(37)
 vcpkg_from_github(
     OUT_SOURCE_PATH SOURCE_PATH
     REPO InsightSoftwareConsortium/ITK
-    REF d3286c9cc04ba16cc8f73de9a98fbcd7c02f3c7b
-    SHA512 c358449870d580aeb10e32f8be0ca39e8a76d8dc06fda973788fafb5971333e546611c399190be49d40f5f3c18a1105d9699eef271a560aff25ce168a396926e
+    REF 73e883dabaf791f0bb99df9058a0955b9432f9a3
+    SHA512 03a7c1c293c73bdd6c9adf3650dd3c4975d20306d316a7d4cf3dfba383609caf1cd580c47b2cab8520acb19cbf1a97d537c5ef1db2ef9a7f1926f5dc7f6374c5
     HEAD_REF master
     PATCHES
-        hdf5.patch
-        double-conversion.patch
+        # hdf5.patch
+        # double-conversion.patch
         openjpeg.patch
         openjpeg2.patch
         var_libraries.patch
-        wrapping.patch
-        python_gpu_wrapping.patch
-        opencl.patch
-        cufftw.patch
+        # wrapping.patch
+        # python_gpu_wrapping.patch
+        # opencl.patch
+        # cufftw.patch
         use-the-lrintf-intrinsic.patch
 )
 
