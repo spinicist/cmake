@@ -1,9 +1,10 @@
+# set(VCPKG_USE_HEAD_VERSION ON)
 vcpkg_from_gitlab(
     GITLAB_URL https://gitlab.com
     OUT_SOURCE_PATH SOURCE_PATH
     REPO libeigen/eigen
-    REF b0eded878d5d162d61583a286c0d8a45406ad1bc
-    SHA512 effa431e2decd3ad5d82c83bc8adcb4f346dc0206a2b0d2ebf2e0e4aaa721697df652957b3aec99100591e35fc8dca587ebb79a1ce0b54d546b01dbc0c5a1cba
+    REF a798d076596343b89b18e44c8033d77d22e19892
+    SHA512 fa5b4566fefb8300922f7aaf309ab2a0cbe0266c77f3be8f06c76d9a8622ee0c99bc2f7673ac7b127d356986a53aceb8f56388c02a014f8d4d64b546c5d341cf
     HEAD_REF master
 )
 
