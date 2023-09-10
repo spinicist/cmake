@@ -1,9 +1,19 @@
 include(CheckCXXCompilerFlag)
 include(CMakeToolsHelpers OPTIONAL)
 include(CMakePrintHelpers)
+
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_LIST_DIR})
-include(${CMAKE_CURRENT_LIST_DIR}/BuildType.cmake)
-include(${CMAKE_CURRENT_LIST_DIR}/ccache.cmake)
+
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+  set(CMAKE_BUILD_TYPE RelWithDebInfo CACHE
+    STRING "Choose the build mode." FORCE)
+endif()
+set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS Debug Release RelWithDebInfo)
+
+find_program(CCACHE_PROGRAM ccache)
+if(CCACHE_PROGRAM)
+    set_property(GLOBAL PROPERTY RULE_LAUNCH_COMPILE "${CCACHE_PROGRAM}")
+endif()
 
 set(FLAGS_FILE "base" CACHE STRING "Which flags file to include")
 set(ENV{FLAGS_FILE} ${FLAGS_FILE})
